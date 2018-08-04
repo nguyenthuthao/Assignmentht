@@ -1,9 +1,11 @@
 //Check password
-var txtPassword = $('.password').val();
-var txtRePassword = $('.re-password').val();
 $('.signup-btn').on('click',function () {
-    if (txtPassword === txtRePassword){
+    var txtPassword = $('.password').val();
+    var txtRePassword = $('.re-password').val();
+    if ((txtPassword !== '') && (txtPassword === txtRePassword)){
         $('form#register').submit();
+        return true;
     }
     alert("Password incorrect");
+    return false;
 });

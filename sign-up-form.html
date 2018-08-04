@@ -43,7 +43,6 @@
 
     /* Float cancel and signup buttons and add an equal width */
     .cancelbtn, .signupbtn {
-        float: left;
         width: 50%;
     }
 
@@ -79,36 +78,6 @@
         border: 1px solid #f1f1f1;
         margin-bottom: 25px;
     }
-
-    /* The Close Button (x) */
-    .close {
-        position: absolute;
-        right: 35px;
-        top: 15px;
-        font-size: 40px;
-        font-weight: bold;
-        color: #f1f1f1;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #f44336;
-        cursor: pointer;
-    }
-
-    /* Clear floats */
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-
-    /* Change styles for cancel button and signup button on extra small screens */
-    @media screen and (max-width: 300px) {
-        .cancelbtn, .signupbtn {
-            width: 100%;
-        }
-    }
 </style>
 <body>
 
@@ -127,18 +96,15 @@
             <label for="psw-repeat"><b>Repeat Password</b></label>
             <input class="re-password" type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
-            <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
-            <div class="clearfix">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <button type="button" class="signup-btn"><a href="index.html">Sign Up</a></button>
+            <div class="row">
+                <div class="col-md-6 text-center" style="text-align: center;">
+                    <button class="signup-btn text-center signupbtn">Sign Up</button>
+                </div>
             </div>
         </div>
     </form>
 </div>
-
+<script type="text/javascript" src="assets/js/jquery-3.1.1.js"></script>
 <script src="assets/js/sign-up.js"></script>
-
 </body>
 </html>
